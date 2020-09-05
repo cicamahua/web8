@@ -22,4 +22,17 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
+	public function saludar()
+	{
+		$this->load->helper('url');
+		$datos =[
+			'nombres' => "Jose Luis",
+			'apellidos' => "Perez"
+		];
+		$this->load->view('saludar', $datos);
+	}
+	public function despedir()
+	{
+		echo "Me voy";
+	}
 }
